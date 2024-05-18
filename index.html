@@ -1,49 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Folder Structure Visualizer</title>
 
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.12/themes/default/style.min.css">
-  <link rel="stylesheet"
-        href="/style.css">
-  <link rel='stylesheet'
-        href='/src/treejs.css'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="/src/style.css">
+  <link rel="stylesheet" href="/src/treejs.css">
 </head>
-
 <body class="section">
   <div class="container">
     <h1 class="title is-3">Folder Structure Visualizer</h1>
-    <textarea id="folderInput"
-              class="textarea mb-4"
-              rows="10"
-              placeholder="Enter folder structure here..."></textarea>
+    <textarea id="folderInput" class="textarea mb-4" rows="10" placeholder="Enter folder structure here..."></textarea>
     <div class="buttons">
-      <button id="visualizeBtn"
-              class="button is-primary">Visualize</button>
-      <button id="exportImgBtn"
-              class="button is-success">Export as Image</button>
-      <button id="exportTxtBtn"
-              class="button is-warning">Export as Text</button>
-      <button id="generateScriptBtn"
-              class="button is-danger">Generate Script</button>
+      <button id="visualizeBtn" class="button is-primary">Visualize</button>
+      <button id="exportImgBtn" class="button is-success">Export as Image</button>
+      <button id="exportTxtBtn" class="button is-warning">Export as Text</button>
+      <button id="generateScriptBtn" class="button is-danger">Generate Script</button>
     </div>
-    <div id="outputContainer"
-         class="box mt-4">
+    <div id="outputContainer" class="box mt-4">
       <div id="folderTree"></div>
     </div>
   </div>
-  <div id="contextMenu"
-       class="menu"
-       style="display:none; position:absolute;">
+  <div id="contextMenu" class="context-menu" style="display:none;">
     <p class="menu-label">Actions</p>
     <ul class="menu-list">
       <li><a id="renameNode"><i class="fas fa-edit"></i> Rename</a></li>
@@ -55,9 +36,7 @@
     </ul>
   </div>
 
-  <script src='/src/tree.js'></script>
-  <script type="module"
-          src="/src/main.js"></script>
+  <script src="/src/tree.js"></script>
+  <script type="module" src="/src/main.js"></script>
 </body>
-
 </html>
